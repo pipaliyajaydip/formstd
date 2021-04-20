@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				
+				<title>Student-Form</title>
+				<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<style>
+
+								h2{margin-left:55px;
+								margin-top:10px;
+								color: black;}
+								
+								.ip{
+												border:none;
+												background: transparent;
+												border-bottom: solid 2px orange;
+												border-width:2px;		
+												padding:2px 2px 0px 2px;
+								}
+								label {
+												color:green;
+												
+								}
+								form{margin-left:15px;
+								margin-top:5px;
+								}
+								hr{margin-right:17px;}
+								.selectcolor{border-radius:10px;
+								outline:none;}
+								
+								.container{border:solid blue;
+								border-radius:10px;
+								width:300px;
+								height:380px;
+								margin-left:10px;
+								padding:15px 15px 15px 15px;}
+								
+								.btn{	margin-left:37px;
+								outline:none;	
+								font-size:20px;}
+								#submit{height:30px;
+								border:solid green;
+								border-radius:5px;
+								color: green;
+								background-color: lightyellow;
+								}
+								#submit:hover{background-color: orange;
+								color:green;
+								border: black;}
+								#reset:hover{background-color: orange;
+								color:green;
+								border: black;}
+								#reset{height:30px;
+								border:solid red;
+								border-radius:5px;
+								color: red;
+								background-color: lightpink;
+								}		
+				</style>
+</head>
+<body>
+				<div class="container">
+								<form >
+												<h2>Student Form</h2>			
+												<label>Name : </label> 
+												<input id="name" type="text" class="ip" required>
+												<br><br>
+												<label>En. No : </label>					
+								       <input 
+								        type="number" class="ip" id="enno" required>
+								       <br><br>
+								       <label>D.O.B : </label>
+								       <input type="date"  class="ip" id="DOB" required>
+								       <br><br>
+								       <label>E-mail : </label>
+								       <input type="email" size="20" id="email" class="ip" required>
+								       <br><br>
+								       <label>Contact:</label>
+								       <input type="number" size="20" id="contact" class="ip"required >
+								       <br><br>
+								       <label>Gender : </label>
+								       <select id="gen" class="ip">
+								       	<option>Select your Gender</option>
+								       				<option value="Male">Male</option>
+								       	<option value="Female">Female</option>
+								       </select>
+								       <br><br>
+								       <label>Favourite Colour : </label>
+								       <input size="12"  id="selcolor"type="text" class="ip" required>
+								       <br>
+								       <br>
+								       <input class="btn" onclick="studentdata()" id="submit"type="Submit">
+								       <input class="btn" id="reset"type="reset">
+								</form>
+				</div>
+				<br>
+				<br>
+				<div class="disdata">
+								<span id="dname"></span><br><br>
+								<span id="denno"></span><br><br>
+								<span id="ddob"></span><br><br>
+				      <span id="demail"></span><br><br>
+				      <span id="dcontact"></span><br><br>
+				      <span id="dgen"></span><br><br>
+				      <span id="dfavcolour"></span>
+				      </div>
+				  		      
+				  <script>
+				  				
+function studentdata(){
+				
+			document.getElementById('dname').innerHTML= "Name : " +document.getElementById("name").value;
+			document.getElementById('denno').innerHTML= "En.No : " +document.getElementById("enno").value;
+document.getElementById('ddob').innerHTML= "D.O.B : " +document.getElementById("DOB").value;
+document.getElementById('demail').innerHTML= "E-mail : " +document.getElementById("email").value;
+document.getElementById('dcontact').innerHTML= "Contact No. : " +document.getElementById("contact").value;
+document.getElementById('dgen').innerHTML= "Gender : " +document.getElementById("gen").value;
+document.getElementById('dfavcolour').innerHTML= "Favourite Colour : " +document.getElementById("selcolor").value;
+}
+			
+				  				
+				  </script>
+</body>
+</html>
